@@ -1,9 +1,11 @@
 ﻿using Barber_Shop.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Principal;
 
 namespace Barber_Shop.ApplicationDbContext
 {
-    public class AppDbContex : DbContext
+    public class AppDbContex : IdentityDbContext
     {
         public AppDbContex(DbContextOptions<AppDbContex> options) : base(options)
         {
